@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1 Add a New Pet
+    form(action='/update-cobj', method='POST')
+      label(for='name') Pet Name:
+      input#name(type='text', name='name', placeholder='Enter pet name', required)
+      br
+      label(for='species') Species:
+      input#species(type='text', name='species', placeholder='Enter species', required)
+      br
+      label(for='age') Age:
+      input#age(type='number', name='age', placeholder='Enter age', required)
+      br
+      button(type='submit') Submit
+    br
+    a(href='/') Back to Homepage
